@@ -1,0 +1,145 @@
+// 03.	Faça um programa na Linguagem Kotlin que receba 2 números e apresente a multiplicação dos dois números.
+
+fun main() {
+    var a: Int = 8
+    var b: Int = 2
+    println(a*b)
+}
+ 
+// 04.	 Faça um programa na Linguagem Kotlin que leia uma temperatura em graus Celsius e apresentá-la convertida em graus Fahrenheit. A fórmula de conversão é F <-- (9 * C + 160) /5, sendo f a temperatura em Fahrenheit e C a temperatura em Celsius.
+fun main() {
+    var c: Double
+    println("Digite a temperatura em Celcius")
+    c = readLine().toString().toDouble()
+    var f : Double
+    f = (9 * c + 160) /5
+    print("A temperatura em fahrenheit é $f")
+}
+ 
+// 05.	 Faça um programa na Linguagem Kotlin que leia uma temperatura em graus Fahrenheit e apresentá-la convertida em graus Celsius. A formula de conversão é C <-- (F - 32) * (5/9), sendo f a temperatura em Fahrenheit e C a temperatura em Celsius.
+ 
+fun main() {
+    var f: Double
+    println("Digite a temperatura em fahrenheit")
+    f = readLine().toString().toDouble()
+    var c : Double
+    c = (f - 32) * (5.0 / 9.0)
+    print("A temperatura em celcius é $c")
+}
+ 
+ 
+// 06.	 Faça um programa na Linguagem Kotlin  para calcular e apresentar o valor do volume de uma lata de óleo, utilizando a fórmula:VOLUME <-- 3.14159 * RAIO2 * ALTURA.
+fun main() {
+ 
+    var altura : Double
+    var raio : Double
+    println("Digite a altura")
+    altura = readLine().toString().toDouble()
+    println("Digite o raio")
+    raio = readLine().toString().toDouble()
+    var volume = 3.14159 * (raio*raio) * altura
+ 
+    print("O volume da lata de óleo é de $volume")
+}
+ 
+// 07.	 Faça um programa na Linguagem Kotlin que leia a idade de uma pessoa expressa em ano, mês e dia e mostre-as em dias.
+fun main() {
+   println("Aniversario.")
+   print("Ano: ")
+   var ano: Int = readLine().toString().toInt()
+   print("Mês: ")
+   var mes: Int = readLine().toString().toInt()
+   print("Dia: ")
+   var dia: Int = readLine().toString().toInt()
+   var totaldias: Int = (ano * 365) + (mes * 30) + dia
+   print("O total de dias é ${totaldias}")
+}
+ 
+ 
+// 08.	 Faça um programa na Linguagem Kotlin que calcule a área da circunferência.
+fun main() {
+ 
+    var raio : Double
+    println("Digite o raio")
+    raio = readLine().toString().toDouble()
+    var area = 3.14159 * (raio*raio)
+ 
+    print("A área da circunferencia é de $area")
+}
+ 
+// 09.	 Faça um programa na Linguagem Kotlin para efetuar o cálculo e a apresentação do valor de uma prestação em atraso, utilizando a fórmula PRESTAÇÃO <-- VALOR + (VALOR * (TAXA/100) * TEMPO).
+ fun main() {
+ 
+    var valor : Double
+    var taxa : Double
+    var tempo : Double
+    println("Digite o valor")
+    valor = readLine().toString().toDouble()
+    println("Digite a taxa")
+    taxa = readLine().toString().toDouble()
+    println("Digite o tempo")
+    tempo = readLine().toString().toDouble()
+    var prestacao = valor + (valor * (taxa/100) * tempo)
+ 
+    print("O valor da prestacao é de $prestacao")
+}
+ 
+// 10.	Faça um programa na Linguagem Kotlin que efetue a apresentação do valor da conversão em real de um valor lido em dólar. O programa deve solicitar o valor da cotação do dólar e também a quantidade de dólares disponível com o usuário, para que seja apresentado o valor em moeda brasileira.
+fun main() {
+ 
+    var cotacao : Double
+    var quantidadeDolar : Double
+ 
+    
+    println("Digite o valor do dolár")
+    cotacao = readLine().toString().toDouble()
+    println("Digite a quantidade de dolar disponível")
+    quantidadeDolar = readLine().toString().toDouble()
+ 
+    
+    var conversao = cotacao * quantidadeDolar
+ 
+    print("O valor em reais é de $conversao")
+}
+
+// 11.	Faça um programa na Linguagem Kotlin  para ler dois valores inteiros para as variáveis A e B e efetuar a troca dos valores de forma que a variável A passe a possuir o valor da variável B e a variável B passe a possuir o valor da variável A. Apresentar os valores trocados.
+ fun main() {
+ 
+    var a : Double
+    var b : Double
+    var c : Double
+ 
+    
+    println("Digite o valor de A")
+    a = readLine().toString().toDouble()
+    println("Digite o valor de B")
+    b = readLine().toString().toDouble()
+    c = a
+    a = b
+    b = c
+    println(a)
+    print(b)
+}
+ 
+// 12.	Faça um programa na Linguagem Kotlin para efetuar a leitura de um número inteiro e apresentar o resultado do quadrado desse número.
+ fun main() {
+ 
+    var a : Int
+
+    println("Digite o valor de A")
+    a = readLine().toString().toInt()
+
+ 
+    println(a*a)
+}
+ 
+// 13.	Faça um programa na Linguagem Kotlin que receba um número e mostre o resto da divisão por 6.
+ fun main() {
+ 
+    var a : Double
+
+    println("Digite o valor de A")
+    a = readLine().toString().toDouble()
+
+ 
+    println(a%6)
