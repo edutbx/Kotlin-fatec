@@ -1,0 +1,71 @@
+// // 46. Faça um programa na Linguagem Kotlin que leia tenha 3 opções:     
+// 1 - Fatorial   
+// 2 - Quadradro de um número    
+// 3 - Volume de uma lata    
+// 4 – Sair do Programa
+// Utilize os conceitos de funções em Kotlin
+
+
+fun main() {
+   var x: Int
+   
+    println("===== OPÇÕES =====")
+    println("1 - Fatorial")
+    println("2 - Quadrado de um número")
+    println("3 - Volume de uma lata")
+    println("4 - Sair do programa")
+    println("====================")
+    
+    x = readLine().toString().toInt()
+    
+    while (x != 4){
+        if (x == 1){
+            println("Digite um número inteiro para saber o seu fatorial")
+            var n = readLine().toString().toInt()
+            println("O seu fatorial é: ${fatorial(n)}")
+        }else if (x == 2){
+            println("Digite um número inteiro para saber o seu quadrado")
+            var n = readLine().toString().toInt()
+            println("O seu quadrado é: ${quadrado(n)}")
+        }else if(x == 3){
+            println("Digite o raio")
+            var r = readLine().toString().toDouble()
+            println("Digite a altura")
+            var h = readLine().toString().toDouble()
+            println("O volume da lata é de: ${volumeLata(r,h)}")
+        }else{
+            println("Digite outra opção!")
+        }
+        
+        println("\n===== OPÇÕES =====")
+        println("1 - Fatorial")
+        println("2 - Quadrado de um número")
+        println("3 - Volume de uma lata")
+        println("4 - Sair do programa")
+
+        x = readLine().toString().toInt()
+        
+  
+    }
+          print("Programa finalizado")
+}
+    fun fatorial(n:Int):Int{
+        var temp = 1
+        var num = n
+
+       while (num > 1){
+           temp *= num
+           num--
+       }
+       return temp
+    }
+    
+    fun quadrado(n:Int):Int{
+        return n * n
+    }
+    
+    fun volumeLata(r:Double, h:Double):Double{
+        var pi = 3.1415
+        return pi * (r * r) * h
+    }
+    
