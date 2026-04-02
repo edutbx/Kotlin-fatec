@@ -1,0 +1,76 @@
+// 70. Faça um exemplo uma variável do tipo função anônima (slide 5)
+// fun main() {
+//     val divisao = { x: Int, y: Int -> x / y}
+    
+//     print(divisao(10,2))
+// }
+
+// 71.Faça um exemplo utilizando sortedBy
+// fun main() {
+    
+//     data class Times(var nome: String, var ano:Int){}
+    
+//   val list = arrayListOf(
+//             Times(nome = "Corinthians", ano = 1910),
+//             Times(nome = "Botafogo", ano = 1901),
+//             Times(nome = "Fluminense", ano = 1902)
+//             )
+            
+//     print(list.sortedBy{it.ano}.map{it.ano}) sortedBy → ordena map → transforma (pega só o campo que você quer)
+// }
+
+// 72. Faça um exemplo utilizando filter
+// class Alunos(
+//     val nome: String,
+//     val nota: Double
+// )
+
+
+// fun main(){
+//     val alunos = arrayListOf(
+//         Alunos("Eduardo", 9.5),
+//         Alunos("Guilherme", 1.5),
+//         Alunos("Pedro", 2.5),
+        
+//     )
+    
+//     val alunosAprovados = alunos.filter{ it.nota >= 7 }.sortedBy{it.nome}
+//     println("Alunos aprovados:")
+//     alunosAprovados.forEach {
+//     println("- ${it.nome}")
+// }
+    
+// }
+
+
+// 73. Faça um exemplo utilizando reduce
+// fun main(){
+
+//     val numeros = listOf(2, 4, 6)
+
+//     val soma = { acc: Int, atual: Int -> acc + atual }
+
+//     println(numeros.reduce(soma))
+
+
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
