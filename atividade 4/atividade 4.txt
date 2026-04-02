@@ -1,0 +1,118 @@
+// // // 49. Criar uma coleÃ§Ã£o na linguagem Kotlin com 10 elementosâ	Inserir os elementos de 1 a 10 no vetorâ	
+// // // ApÃ³s a inserÃ§Ã£o, somente apÃ³s a inserÃ§Ã£o mostrar o vetor.Obs. NÃ£o efetuar a leitura de 10 elementos
+
+// fun main() {
+//     val numeros = arrayListOf<Int>()
+    
+//     for (i in 1..10){
+//         numeros.add(i)
+//     }
+    
+//     print(numeros)
+// }
+
+// // // 51. Criar uma coleção “A” na linguagem Kotlin com 10 elementos–	Inserir os elementos de 1 a 10 na coleção–	Criar uma outra coleção B 
+// // // que conterá o elemento da coleção A multiplicado por 2–	Mostrar as duas coleçõesObs. Não efetuar a leitura de 10 elementos
+
+// fun main() {
+//     val A = arrayListOf<Int>()
+
+//     for (i in 1..10){
+//         A.add(i)
+//     }
+    
+//     val B = arrayListOf<Int>()
+    
+//     for (i in A){
+//         B.add(i*2)
+//     }
+    
+//     println(A)
+//     println(B)
+// }
+
+// // 54. Fazer um procedimento para receber as notas da primeira e da segunda
+// // prova de cinco alunos. Armazenar as notas da primeira e da segunda prova em 
+// // vetores distintos. Calcular e escrever a média de cada aluno.
+
+// fun main(){
+//     val P1 = arrayListOf<Double>() 
+//     val P2 = arrayListOf<Double>()
+    
+//     for (i in 1..2){
+//     var x : Double
+//         println("Digite a nota da p1")
+//          x  = readLine().toString().toDouble()
+//          P1.add(x)
+//         println("Digite a nota da p2")
+//           x = readLine().toString().toDouble()
+//           P2.add(x)
+//     }
+    
+//     for (i in 0..1){
+//         val media = (P1[i] + P2[i]) / 2
+//         println("A média do ${i+1}° aluno é: $media")
+//     }
+// }
+
+// // 57. Criar um vetor A do tipo inteiro de 5 elementos–	Solicitar os valores para o usuário e inserir no vetor A–	Criar um vetor B do tipo inteiro  –	
+// // Ler o vetor A e para cada elemento lido calcular o fatorial e gravar no B–	Após de todos os elementos do vetor A, mostrar os dois vetores
+
+// fun main(){
+//     val A = arrayListOf<Int>()
+    
+//     for(i in 1..5){
+//         println("Digite o ${i}° número")
+//         val n = readLine().toString().toInt()
+//         A.add(n)
+//     }
+    
+//     val B = arrayListOf<Int>()
+    
+//     for(numero in A){
+//         var fatorial = 1
+        
+//         for(i in 1..numero) {
+//             fatorial *= i
+//         }
+        
+//         B.add(fatorial)
+//     }
+    
+//     println("Vetor A: $A")
+//     println("Vetor B: $B")
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
