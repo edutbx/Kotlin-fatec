@@ -1,0 +1,43 @@
+// 65. Fazer um programa para ler os dados de um funcionário (nome, salário Bruto e Desconto).
+// Em seguida, mostrar os dados do funcionário (nome e salário líquido). Em seguida, aumentar o salário
+// do funcionário com base em uma porcentagem dada e mostrar novamente os dados do funcionário. 
+
+class Funcionario(
+    val nome: String,
+    var salarioBruto: Double,
+    val desconto: Double
+) {
+
+    fun salarioLiquido(): Double {
+        return salarioBruto - desconto
+    }
+
+    fun aumentarSalario(porcentagem: Double) {
+        salarioBruto += salarioBruto * (porcentagem / 100.0)
+    }
+}
+
+fun main() {
+    println("Nome:")
+    val nome = readLine().toString()
+
+    println("Salário bruto:")
+    val salarioBruto = readLine().toString().toDouble()
+
+    println("Desconto:")
+    val desconto = readLine().toString().toDouble()
+
+    val funcionario = Funcionario(nome, salarioBruto, desconto)
+
+    println("Funcionário: ${funcionario.nome}")
+    println("Salário líquido: %.2f".format(funcionario.salarioLiquido()))
+
+    println("Digite a porcentagem para aumentar o salário:")
+    val porcentagem = readLine().toString().toDouble()
+
+    funcionario.aumentarSalario(porcentagem)
+
+    println("Dados atualizados:")
+    println("Funcionário: ${funcionario.nome}")
+    println("Salário líquido: %.2f".format(funcionario.salarioLiquido()))
+}
