@@ -1,0 +1,205 @@
+// 16. Faça um programa na Linguagem Kotlin que leia 3 (três) valores inteiros e apresente os 3 números em ordem crescente.
+fun main() {
+    var a: Int
+    var b: Int
+    var c: Int
+
+    println("Digite o primeiro numero int: ")
+    a = readLine()!!.toInt()
+
+    println("Digite o segundo numero int: ")
+    b = readLine()!!.toInt()
+
+    println("Digite o terceiro numero int: ")
+    c = readLine()!!.toInt()
+
+    if (a <= b && a <= c) {
+        if (b <= c) {
+            println("$a, $b, $c")
+        } else {
+            println("$a, $c, $b")
+        }
+    } else if (b <= a && b <= c) {
+        if (a <= c) {
+            println("$b, $a, $c")
+        } else {
+            println("$b, $c, $a")
+        }
+    } else {
+        if (a <= b) {
+            println("$c, $a, $b")
+        } else {
+            println("$c, $b, $a")
+        }
+    }
+}
+
+// 19. Faça um programa na Linguagem Kotlin que leia quatros valores referentes a quatro notas escolares de um aluno e imprimir uma mensagem dizendo que o aluno foi aprovado, se o valor da média escolar for maior ou igual a 7. Se o aluno não foi aprovado, indicar uma mensagem informando esta condição. Apresentar junto das mensagens o valor da média do aluno para qualquer condição.
+fun main() {
+    var n1: Double
+    var n2: Double
+    var n3: Double
+    var n4: Double
+    var media : Double
+
+    println("Digite a primeira nota: ")
+    n1 = readLine()!!.toDouble()
+
+    println("Digite a segunda nota: ")
+    n2 = readLine()!!.toDouble()
+
+    println("Digite a terceira nota: ")
+    n3 = readLine()!!.toDouble()
+
+    println("Digite a quarta nota: ")
+    n4 = readLine()!!.toDouble()
+
+    media = (n1+n2+n3+n4) / 4
+    if (media >= 7){
+        println("Aprovado")
+    } else{
+        println("Reprovado")
+    }
+    print("$media")
+}
+
+// 22. Faça um programa na Linguagem Kotlin que leia 3 números inteiros e mostre o maior deles. 
+fun main() {
+    var a: Int
+    var b: Int
+    var c: Int
+
+    println("Digite o primeiro numero int: ")
+    a = readLine()!!.toInt()
+
+    println("Digite o segundo numero int: ")
+    b = readLine()!!.toInt()
+
+    println("Digite o terceiro numero int: ")
+    c = readLine()!!.toInt()
+
+    if (a >= b && a >= c) {
+        print("O maior número é:$a")
+    } else if (b >= a && b >= c) {
+        print("O maior número é:$b")
+    } else {
+        println("O maior número é:$c")
+    }
+}
+
+// 23. Faça um programa na Linguagem Kotlin que efetue a leitura de cinco números inteiros e identificar o maior e o menor valor. Não execute a ordenação de valores.
+fun main() {
+    var numeros = IntArray(5)
+    for (i in 0..4){
+        println("Digite o ${i+1}° número: ")
+        numeros[i] = readLine()!!.toInt()
+    }
+
+    var maior = numeros[0]
+    var menor = numeros[0]
+
+    for (n in numeros){
+        if(n > maior) maior = n
+        if(n < menor) menor = n
+    }
+
+    println("Maior: $maior")
+    print("Menor: $menor")
+}
+
+// 24. Faça um programa na Linguagem Kotlin que efetue a leitura de um número inteiro e apresentar uma mensagem informando se o número é par ou ímpar.
+fun main() {
+    var n: Int
+
+    println("Digite um número inteiro para saber se é par ou ímpar")
+    n = readLine()!!.toInt()
+
+    if (n % 2 == 0){
+        print("par")
+    }else{
+        print("ímpar")
+    }
+}
+
+// 27. O cardápio de uma lanchonete é o seguinte: (ler código e quantidade, calcular valor)
+fun main () {
+    var cod: Int
+    var qnt: Int
+    var valor: Double
+
+    println("===== CARDÁPIO =====")
+    println("100 - Cachorro quente - R$ 1.20")
+    println("101 - Bauru simples   - R$ 1.30")
+    println("102 - Bauru com ovo   - R$ 1.50")
+    println("103 - Hambúrguer      - R$ 1.20")
+    println("104 - Cheeseburguer   - R$ 1.30")
+    println("105 - Refrigerante    - R$ 1.00")
+    println("====================")
+
+    println("Digite o código do produto:")
+    cod = readLine()!!.toInt()
+
+    println("Digite a quantidade:")
+    qnt = readLine()!!.toInt()
+
+    if (cod == 100) {
+        valor = qnt * 1.20
+        println("Cachorro quente, valor a pagar: R$ $valor")
+    } else if (cod == 101) {
+        valor = qnt * 1.30
+        println("Bauru simples, valor a pagar: R$ $valor")
+    } else if (cod == 102) {
+        valor = qnt * 1.50
+        println("Bauru com ovo, valor a pagar: R$ $valor")
+    } else if (cod == 103) {
+        valor = qnt * 1.20
+        println("Hambúrguer, valor a pagar: R$ $valor")
+    } else if (cod == 104) {
+        valor = qnt * 1.30
+        println("Cheeseburguer, valor a pagar: R$ $valor")
+    } else if (cod == 105) {
+        valor = qnt * 1.00
+        println("Refrigerante, valor a pagar: R$ $valor")
+    } else {
+        println("Código inválido!")
+    }
+}
+
+// 31. Faça um programa na Linguagem Kotlin que que receba um número e mostre o fatorial desse número.
+fun main () {
+    var n: Int
+    var fatorial = 1
+
+    println("Digite um número para descobrir o seu fatorial")
+    n = readLine()!!.toInt()
+
+    while(n > 1){
+        fatorial *= n
+        n--
+    }
+
+    print("O fatorial é: $fatorial")
+}
+
+// 33. Faça um programa na Linguagem Kotlin para apresentar o total da soma obtida dos cem primeiros números inteiros (1 + 2 + ... + 100).
+fun main() {
+    var x = 0
+
+    for (i in 1..100){
+        x += i
+    }
+
+    print ("A soma dos 100 primeiros números inteiros é de: $x")
+}
+
+// 36. Faça um programa na Linguagem Kotlin que apresente os valores de conversão de graus Celsius em Fahrenheit, de 10 em 10 graus, iniciando a contagem em 10 graus Celsius e finalizando em 100 graus Celsius.
+fun main() {
+    var c = 10
+    var f : Double
+
+    while (c <= 100){
+        f = (c * 9.0/5.0)+32
+        println("Celsius: $c // Fahrenheit: $f")
+        c += 10
+    }
+}
